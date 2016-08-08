@@ -131,7 +131,7 @@ EOS
         }
 EOS
       def create
-        render json: {error: 'Url params can not be blank'}, status: 400 and return if content_params.blank?
+        render json: {error: 'Url params can not be blank'}, status: 402 and return if content_params.blank?
         @content = Content.new(content_params)
         if @content.import
           render json: @content, status: 200
@@ -143,7 +143,6 @@ EOS
       private
 
       def content_params
-        return nil if params[:content].blank?
         params.require(:content).permit(:url)
       end
     end
