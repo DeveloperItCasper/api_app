@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'apipie-rails'
   gem 'rspec-rails', '~> 3.5'
 end
 
@@ -20,7 +21,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rubocop', require: false
-  gem 'apipie-rails'
 end
 
 gem 'annotate'
